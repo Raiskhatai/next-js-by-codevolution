@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
-import "./globals.css";
+import "../globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -28,15 +28,21 @@ export default function RootLayout({
     // a layout is UI that is shared between multiple pages in your app
     // example header and footer are in every page .
     // layout change children when route change index feer about page par jane par header footer wahi rahnege children ab about ho jayega .
+
+    // agar hum chahte kuch page par navbar rhey kuch par nhi to jin page par chahiye un ko alag folder mey dedo jinpe nhi chahiye un ko alag folter mey rakho index page ek he banega layout dono folder mey banegi page ko front end ka kaam jisme ho rha usme rakho
+
     <html
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col text-6xl p-15 capitalize justify-center items-center">
-        <header className="bg-white text-black absolute top-0 w-full text-center">header or navbar</header>
+        <header className="bg-white text-black absolute top-0 w-full text-center">
+          header or navbar
+        </header>
         {children}
-        <footer className="bg-white text-black absolute bottom-1 w-full text-center">footer  </footer>
-
+        <footer className="bg-white text-black absolute bottom-1 w-full text-center">
+          footer{" "}
+        </footer>
       </body>
     </html>
   );
