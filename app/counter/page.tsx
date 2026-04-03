@@ -1,14 +1,18 @@
-"use client";
-
-import React, { useState } from "react";
+import React from "react";
 import Counter from "./counter";
 
-export const Metadata = {
-  title: "counter",
+export const metadata = {
+  title: "meta-data",
+  description: "this is meta data page of our website meta ",
 };
 
-const CounterPage = () => {
-  return <Counter />;
+const page = ({params}) => {
+  console.log(params)
+  return (
+    <div>
+      <Counter />
+    </div>
+  );
 };
 
-export default CounterPage;
+export default page;
