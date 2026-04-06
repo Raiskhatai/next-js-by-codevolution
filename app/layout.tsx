@@ -32,11 +32,15 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col text-xl p-15 capitalize justify-center items-center">
-        <header className="bg-white text-5xl text-black absolute top-0 w-full text-center">header or navbar</header>
-        {children}
-        <footer className="bg-white text-5xl text-black absolute bottom-1 w-full text-center">footer  </footer>
-
+      <body className="min-h-screen flex flex-col">
+        <header className="bg-white text-5xl text-black  w-full text-center">
+          header or navbar
+        </header>
+        <main className="
+        flex-1" >{children}</main>
+        <footer className="bg-white text-5xl text-black  w-full text-center">
+          footer 
+        </footer>
       </body>
     </html>
   );
